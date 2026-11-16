@@ -1,0 +1,394 @@
+import random
+
+while True:
+
+    print("\n========================================")
+    print("          PYTHON LEARNING HUB")
+    print("========================================")
+
+    print("[1] PRELIM")
+    print("[2] MIDTERM")
+    print("[3] FINALS")
+    print("[4] EXIT")
+
+    choice = input("Enter your choice: ")
+
+    # =====================================
+    #                 PRELIM
+    # =====================================
+
+    if choice == "1":
+
+        while True:
+
+            print("\n========== PRELIM MENU ==========")
+            print("[1] LESSON")
+            print("[2] QUIZ")
+            print("[3] BACK")
+
+            sub_choice = input("Enter your choice: ")
+
+            if sub_choice == "1":
+
+
+                print("\n========== PRELIM LESSONS ==========")
+
+                print("\n1. FUNDAMENTALS OF PROGRAMMING")
+                print("Programming is creating instructions")
+                print("that tell a computer what to do.")
+                print("Examples: Python, Java, C++")
+
+                print("\n2. PYTHON BASIC SYNTAX")
+                print("Syntax refers to the rules of writing Python code.")
+                print('Example: print("Hello World!")')
+
+                print("\n3. PRINTING OUTPUT")
+                print("The print() function displays information.")
+                print('Example: print("Welcome to Python")')
+
+                print("\n4. VARIABLES AND CONSTANTS")
+                print("Variables store information that can change.")
+                print("Constants are values intended not to change.")
+                print('Example: name = "Michael"')
+                print("PI = 3.14159")
+
+                print("\n5. BASIC DATA TYPES")
+                print("int   = Whole numbers")
+                print("float = Decimal numbers")
+                print("str   = Text")
+                print("bool  = True or False")
+
+                print("\n6. ARITHMETIC OPERATORS")
+                print("+  Addition")
+                print("-  Subtraction")
+                print("*  Multiplication")
+                print("/  Division")
+                print("// Floor Division")
+                print("%  Modulus")
+                print("** Exponentiation")
+
+                print("\n7. BASIC INPUT AND OUTPUT")
+                print("input() accepts information from the user.")
+                print("print() displays information.")
+                print('Example: name = input("Enter name: ")')
+
+                print("\n8. ARITHMETIC EXPRESSIONS")
+                print("a = 10")
+                print("b = 5")
+                print("print(a + b)")
+                print("Output: 15")
+
+            elif sub_choice == "2":
+
+                print("\n========== PRELIM QUIZ ==========")
+
+                questions = [
+                    ("What is programming?",
+                     ["A. Playing games", "B. Giving instructions",
+                      "C. Watching videos", "D. Drawing"], "B"),
+
+                    ("Which function displays output?",
+                     ["A. input()", "B. print()", "C. int()", "D. type()"], "B"),
+
+                    ("Which symbol is used for comments?",
+                     ["A. //", "B. **", "C. #", "D. @"], "C"),
+
+                    ("Which data type stores whole numbers?",
+                     ["A. str", "B. float", "C. int", "D. bool"], "C"),
+
+                    ("Which data type stores decimal numbers?",
+                     ["A. int", "B. float", "C. str", "D. bool"], "B"),
+
+                    ("Which data type stores text?",
+                     ["A. int", "B. float", "C. str", "D. bool"], "C"),
+
+                    ("What is the result of 10 + 5?",
+                     ["A. 10", "B. 15", "C. 20", "D. 5"], "B"),
+
+                    ("Which function accepts user input?",
+                     ["A. print()", "B. input()", "C. type()", "D. range()"], "B"),
+
+                    ("What is the result of 10 % 3?",
+                     ["A. 3", "B. 1", "C. 0", "D. 10"], "B"),
+
+                    ("Which is the correct constant convention?",
+                     ["A. UPPERCASE", "B. print", "C. input", "D. if"], "A")
+                ]
+
+                random.shuffle(questions)
+                score = 0
+
+                for number, q in enumerate(questions, 1):
+                    print("\nQuestion", number)
+                    print(q[0])
+
+                    for option in q[1]:
+                        print(option)
+
+                    answer = input("Your answer: ").upper()
+
+                    if answer == q[2]:
+                        print("CORRECT!")
+                        score += 1
+                    else:
+                        print("INCORRECT!")
+                        print("Correct Answer:", q[2])
+
+                print("\nPRELIM SCORE:", score, "/ 10")
+
+            elif sub_choice == "3":
+                break
+
+            else:
+                print("\nINVALID CHOICE! Please select 1-3.")
+
+    # =====================================
+    #                MIDTERM
+    # =====================================
+
+    elif choice == "2":
+
+        while True:
+
+            print("\n========== MIDTERM MENU ==========")
+            print("[1] LESSON")
+            print("[2] QUIZ")
+            print("[3] BACK")
+
+            sub_choice = input("Enter your choice: ")
+
+            if sub_choice == "1":
+
+                print("\n========== MIDTERM LESSONS ==========")
+
+                print("\n1. CONDITIONAL STATEMENTS")
+                print("Conditional statements allow programs")
+                print("to make decisions based on conditions.")
+                print("Example:")
+                print("age = 18")
+                print("if age >= 18:")
+                print('    print("Adult")')
+
+                print("\n2. IF-ELIF-ELSE STATEMENT")
+                print("if checks the first condition.")
+                print("elif checks another condition.")
+                print("else runs when previous conditions are false.")
+
+                print("\nExample:")
+                print("grade = 90")
+                print("if grade >= 90:")
+                print('    print("Excellent")')
+                print("elif grade >= 75:")
+                print('    print("Passed")')
+                print("else:")
+                print('    print("Failed")')
+
+                print("\n3. LOGICAL OPERATORS")
+                print("AND = Both conditions must be True.")
+                print("OR  = At least one condition is True.")
+                print("NOT = Reverses a Boolean result.")
+
+                print("\nExample:")
+                print("age = 18")
+                print("has_id = True")
+                print("if age >= 18 and has_id:")
+                print('    print("Allowed")')
+
+            elif sub_choice == "2":
+
+                print("\n========== MIDTERM QUIZ ==========")
+
+                questions = [
+                    ("What is a conditional statement?",
+                     ["A. Making decisions", "B. Repeating code",
+                      "C. Printing text", "D. Storing data"], "A"),
+
+                    ("Which keyword checks a condition?",
+                     ["A. for", "B. if", "C. print", "D. input"], "B"),
+
+                    ("What is elif used for?",
+                     ["A. Ending a program", "B. Checking another condition",
+                      "C. Printing", "D. Repeating"], "B"),
+
+                    ("When does else execute?",
+                     ["A. When previous conditions are false",
+                      "B. Always", "C. Before if", "D. Never"], "A"),
+
+                    ("Which operator requires both conditions to be true?",
+                     ["A. or", "B. not", "C. and", "D. else"], "C"),
+
+                    ("Which operator requires at least one true condition?",
+                     ["A. and", "B. or", "C. not", "D. if"], "B"),
+
+                    ("What does NOT do?",
+                     ["A. Repeats", "B. Reverses a Boolean result",
+                      "C. Adds", "D. Prints"], "B"),
+
+                    ("What is the result of 10 > 5?",
+                     ["A. False", "B. True", "C. 10", "D. 5"], "B"),
+
+                    ("Which symbol means equal to?",
+                     ["A. =", "B. ==", "C. !=", "D. >"], "B"),
+
+                    ("Which statement runs if the if condition is false?",
+                     ["A. print", "B. input", "C. else", "D. break"], "C")
+                ]
+
+                random.shuffle(questions)
+                score = 0
+
+                for number, q in enumerate(questions, 1):
+                    print("\nQuestion", number)
+                    print(q[0])
+
+                    for option in q[1]:
+                        print(option)
+
+                    answer = input("Your answer: ").upper()
+
+                    if answer == q[2]:
+                        print("CORRECT!")
+                        score += 1
+                    else:
+                        print("INCORRECT!")
+                        print("Correct Answer:", q[2])
+
+                print("\nMIDTERM SCORE:", score, "/ 10")
+
+            elif sub_choice == "3":
+                break
+
+            else:
+                print("\nINVALID CHOICE! Please select 1-3.")
+
+    # =====================================
+    #                 FINALS
+    # =====================================
+
+    elif choice == "3":
+
+        while True:
+
+            print("\n========== FINALS MENU ==========")
+            print("[1] LESSON")
+            print("[2] QUIZ")
+            print("[3] BACK")
+
+            sub_choice = input("Enter your choice: ")
+
+            if sub_choice == "1":
+
+                print("\n========== FINALS LESSONS ==========")
+
+                print("\n1. INTRODUCTION TO ITERATION AND LOOPS")
+                print("Iteration means repeating instructions.")
+                print("Loops help reduce repeated code.")
+                print("Two common loops are for and while.")
+
+                print("\n2. FOR LOOP")
+                print("A for loop repeats instructions for")
+                print("each item in a sequence.")
+                print("Example:")
+                print("for x in range(5):")
+                print("    print(x)")
+
+                print("\n3. WHILE LOOP")
+                print("A while loop repeats as long as")
+                print("its condition is True.")
+                print("Example:")
+                print("number = 1")
+                print("while number <= 5:")
+                print("    print(number)")
+                print("    number += 1")
+
+                print("\n4. BREAK AND CONTINUE")
+                print("BREAK stops the loop.")
+                print("CONTINUE skips the current iteration.")
+
+                print("\nExample:")
+                print("for x in range(5):")
+                print("    if x == 3:")
+                print("        break")
+                print("    print(x)")
+
+            elif sub_choice == "2":
+
+                print("\n========== FINALS QUIZ ==========")
+
+                questions = [
+                    ("What is iteration?",
+                     ["A. Repeating a process", "B. Deleting data",
+                      "C. Printing", "D. Adding"], "A"),
+
+                    ("Which loop repeats over a sequence?",
+                     ["A. if", "B. else", "C. for", "D. elif"], "C"),
+
+                    ("Which loop repeats while a condition is true?",
+                     ["A. for", "B. while", "C. if", "D. else"], "B"),
+
+                    ("What does range(5) produce?",
+                     ["A. 1 to 5", "B. 0 to 5",
+                      "C. 0 to 4", "D. 1 to 4"], "C"),
+
+                    ("Which statement stops a loop?",
+                     ["A. continue", "B. break", "C. print", "D. input"], "B"),
+
+                    ("Which statement skips an iteration?",
+                     ["A. break", "B. stop", "C. continue", "D. exit"], "C"),
+
+                    ("What is an infinite loop?",
+                     ["A. A loop that never ends", "B. A loop that runs once",
+                      "C. A syntax error", "D. A finished program"], "A"),
+
+                    ("How many times does range(3) repeat?",
+                     ["A. 2", "B. 3", "C. 4", "D. 5"], "B"),
+
+                    ("Which loop uses a condition?",
+                     ["A. while", "B. print", "C. input", "D. int"], "A"),
+
+                    ("What is the purpose of loops?",
+                     ["A. Make code longer",
+                      "B. Repeat instructions efficiently",
+                      "C. Delete variables", "D. Stop programs"], "B")
+                ]
+
+                random.shuffle(questions)
+                score = 0
+
+                for number, q in enumerate(questions, 1):
+                    print("\nQuestion", number)
+                    print(q[0])
+
+                    for option in q[1]:
+                        print(option)
+
+                    answer = input("Your answer: ").upper()
+
+                    if answer == q[2]:
+                        print("CORRECT!")
+                        score += 1
+                    else:
+                        print("INCORRECT!")
+                        print("Correct Answer:", q[2])
+
+                print("\nFINALS SCORE:", score, "/ 10")
+
+            elif sub_choice == "3":
+                break
+
+            else:
+                print("\nINVALID CHOICE! Please select 1-3.")
+
+    # =====================================
+    #                  EXIT
+    # =====================================
+
+    elif choice == "4":
+
+        print("\nThank you for using PYTHON LEARNING HUB!")
+        print("Keep learning and keep practicing!")
+        print('Luke 18:1 Always Pray & Never Give Up!')
+        break
+
+    else:
+        print("\nINVALID CHOICE! Please select 1-4.")
